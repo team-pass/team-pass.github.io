@@ -1,8 +1,9 @@
 // Overriding Bootstrap Colors
-$body-bg: #121212;
-$primary: #ff6768;
-$light: lighten($body-bg, 8%);
-$body-color: #f4f6f6;
+$body-bg: #222831;
+$primary: #e84545;
+$light: #393e46;
+$body-color: #eeeeee;
+$text-muted: darken($body-color, 35%);
 
 // Personal variables
 $timeline-border-color: $light;

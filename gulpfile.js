@@ -61,16 +61,13 @@ function modules() {
   // Font Awesome Webfonts
   var fontAwesomeWebfonts = gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/**/*')
     .pipe(gulp.dest('./vendor/fontawesome/webfonts'));
-  // jQuery Easing
-  var jqueryEasing = gulp.src('./node_modules/jquery.easing/*.js')
-    .pipe(gulp.dest('./vendor/jquery-easing'));
   // jQuery
   var jquery = gulp.src([
       './node_modules/jquery/dist/*',
       '!./node_modules/jquery/dist/core.js'
     ])
     .pipe(gulp.dest('./vendor/jquery'));
-  return merge(bootstrapSCSS, bootstrapJS, fontAwesomeSCSS, fontAwesomeWebfonts, jquery, jqueryEasing);
+  return merge(bootstrapSCSS, bootstrapJS, fontAwesomeSCSS, fontAwesomeWebfonts, jquery);
 }
 
 // CSS task
@@ -105,8 +102,6 @@ function js() {
     .src([
       './js/*.js',
       '!./js/*.min.js',
-      '!./js/contact_me.js',
-      '!./js/jqBootstrapValidation.js'
     ])
     .pipe(uglify())
     .pipe(header(banner, {

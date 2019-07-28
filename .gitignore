@@ -25,6 +25,3 @@ jspm_packages/
 
 # Optional npm cache directory
 .npm
-
-# Don't track vendor information
-vendor/**/*

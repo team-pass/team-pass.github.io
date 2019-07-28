@@ -11,7 +11,7 @@
     width: 2px;
     margin-left: -1.5px;
     content: '';
-    background-color: $gray-200;
+    background-color: $timeline-border-color;
   }
   > li {
     position: relative;
@@ -53,13 +53,15 @@
       margin-left: 0;
       text-align: center;
       color: white;
-      border: 7px solid $gray-200;
+      border: 7px solid $timeline-border-color;
       border-radius: 100%;
-      background-color: $primary;
       h4 {
         font-size: 10px;
         line-height: 14px;
         margin-top: 12px;
+      }
+      &:last-of-type {
+        background-color: $primary;
       }
     }
     &.timeline-inverted > .timeline-panel {

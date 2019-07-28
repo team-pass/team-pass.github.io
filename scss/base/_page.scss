@@ -1,4 +1,8 @@
 // Global styling for this template
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   @include body-font;
@@ -11,7 +15,7 @@ p {
 a {
   color: $primary;
   &:hover {
-    color: darken($primary, 10%);
+    color: lighten($primary, 5%);
   }
 }
 
@@ -42,7 +46,7 @@ h6 {
     font-style: italic;
     margin-bottom: 75px;
     text-transform: none;
-    @include serif-font;
+    @include subtitle-font;
   }
 }
 @media(min-width:768px) {

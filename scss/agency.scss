@@ -2,6 +2,16 @@
 @import "base/variables.scss";
 @import "base/mixins.scss";
 
+// Dependencies (placed here to allow local variables to override 
+// sass rules declared with !default)
+@import "../vendor/bootstrap/scss/bootstrap";
+@import "../vendor/fontawesome/scss/fontawesome";
+@import "../vendor/fontawesome/scss/solid";
+@import "../vendor/fontawesome/scss/brands";
+@import "../vendor/fontawesome/scss/v4-shims";
+@import "../vendor/fontawesome/scss/regular";
+
+
 // Global CSS
 @import "base/page.scss";
 
@@ -15,5 +25,4 @@
 @import "layout/portfolio.scss";
 @import "layout/timeline.scss";
 @import "layout/team.scss";
-@import "layout/contact.scss";
 @import "layout/footer.scss";

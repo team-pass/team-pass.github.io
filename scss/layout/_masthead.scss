@@ -2,14 +2,28 @@
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url('../img/header-bg.jpg');
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-image: url("../img/team/team.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    filter: brightness(50%);
+  }
+
   .intro-text {
     padding-top: 150px;
     padding-bottom: 100px;
+
     .intro-lead-in {
       font-size: 22px;
       font-style: italic;
@@ -17,33 +31,32 @@ header.masthead {
       margin-bottom: 25px;
       @include subtitle-font;
     }
+
     .intro-heading {
       font-size: 50px;
-      font-weight: 700;
+      font-weight: bold;
       line-height: 50px;
       margin-bottom: 25px;
       @include heading-font;
     }
   }
 }
-@media(min-width:768px) {
+
+@media (min-width: 768px) {
   header.masthead {
     .intro-text {
       padding-top: 300px;
       padding-bottom: 200px;
+
       .intro-lead-in {
         font-size: 40px;
-        font-style: italic;
         line-height: 40px;
-        margin-bottom: 25px;
-        @include subtitle-font;
+        margin-bottom: 50px;
       }
+
       .intro-heading {
         font-size: 75px;
-        font-weight: 700;
         line-height: 75px;
-        margin-bottom: 50px;
-        @include heading-font;
       }
     }
   }

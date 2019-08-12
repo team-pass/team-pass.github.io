@@ -16507,7 +16507,6 @@ img::-moz-selection {
 
 #mainNav .navbar-brand {
   color: #e84545;
-  font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
@@ -16890,6 +16889,9 @@ header.masthead .intro-text .intro-heading {
   width: 225px;
   height: 225px;
   border: 7px solid rgba(0, 0, 0, 0.1);
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin: 20px;
 }
 
 .team-member h4 {

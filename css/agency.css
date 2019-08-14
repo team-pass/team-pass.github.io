@@ -16691,6 +16691,18 @@ header.masthead .intro-text .intro-heading {
   }
 }
 
+header.timelinehead {
+  text-align: center;
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #393e46;
+  background-image: url("../img/timeline/timeline-header.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+
 .timeline {
   position: relative;
   padding: 0;

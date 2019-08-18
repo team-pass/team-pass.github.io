@@ -15,6 +15,10 @@
     text-transform: none;
     @include heading-font;
   }
+  .divider {
+    border-color: $gray-400;
+    width: 80%;
+  }
 }
 
 ul.social-buttons {
@@ -43,16 +47,14 @@ ul.social-buttons {
 }
 
 .img-box {
-  display: inline-block;
   height: 100px;
-  margin-bottom: 15px;
 
   a,
   img {
     height: 100%;
   }
 
-  a:last-of-type img {
-    height: 90%;
+  @media (max-width: 1000px) {
+    height: 80px;
   }
 }

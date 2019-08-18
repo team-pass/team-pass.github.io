@@ -2,22 +2,15 @@
 header.masthead {
   text-align: center;
   color: white;
-  position: relative;
+  @include dark-bg("../img/team/team.png");
+  // Shift the masthead down by the header size when the screen size triggers the compressed menu
+  margin-top: 61px;
+  @media (min-width: 992px) {
+    margin-top: 0;
+  }
 
   &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    background-image: url("../img/team/team.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    filter: brightness(50%);
+    background-position: center top;
   }
 
   .intro-text {
@@ -45,7 +38,7 @@ header.masthead {
 @media (min-width: 768px) {
   header.masthead {
     .intro-text {
-      padding-top: 300px;
+      padding-top: 350px;
       padding-bottom: 200px;
 
       .intro-lead-in {

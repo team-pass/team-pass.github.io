@@ -15,6 +15,10 @@
     text-transform: none;
     @include heading-font;
   }
+  .divider {
+    border-color: $gray-400;
+    width: 80%;
+  }
 }
 
 ul.social-buttons {
@@ -39,5 +43,18 @@ ul.social-buttons {
         background-color: darken($social-color, 6%);
       }
     }
+  }
+}
+
+.img-box {
+  height: 100px;
+
+  a,
+  img {
+    height: 100%;
+  }
+
+  @media (max-width: 1000px) {
+    height: 80px;
   }
 }

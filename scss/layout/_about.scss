@@ -1,0 +1,21 @@
+// Styling for the about section
+#about {
+  font-size: 1.2rem;
+}
+
+.service-heading {
+  margin: 15px 0;
+  text-transform: none;
+}
+
+.blockquote {
+  margin: 2rem 0;
+  font-size: 1.75rem;
+}
+
+.mission {
+  @include dark-bg(
+    "https://images.unsplash.com/photo-1480506132288-68f7705954bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1993&q=80"
+  );
+  min-height: 70vh;
+}

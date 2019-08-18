@@ -16600,10 +16600,10 @@ header.masthead .intro-text {
 }
 
 header.masthead .intro-text .intro-lead-in {
-  font-size: 22px;
-  font-style: italic;
-  line-height: 22px;
-  margin-bottom: 25px;
+  font-size: 48px;
+  font-style: bold;
+  line-height: 50px;
+  margin-bottom: 5px;
   font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -16611,6 +16611,7 @@ header.masthead .intro-text .intro-heading {
   font-size: 50px;
   font-weight: bold;
   line-height: 50px;
+  margin-top: 150px;
   margin-bottom: 25px;
   font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -16741,6 +16742,18 @@ header.masthead .intro-text .intro-heading {
   #portfolio .portfolio-item {
     margin: 0 0 30px;
   }
+}
+
+header.timelinehead {
+  text-align: center;
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #393e46;
+  background-image: url("../img/timeline/timeline-header.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
 }
 
 .timeline {
@@ -16941,6 +16954,9 @@ header.masthead .intro-text .intro-heading {
   width: 225px;
   height: 225px;
   border: 7px solid rgba(0, 0, 0, 0.1);
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin: 20px;
 }
 
 .team-member h4 {

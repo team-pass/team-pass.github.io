@@ -16576,7 +16576,7 @@ header.masthead:before {
   bottom: 0;
   right: 0;
   z-index: -1;
-  background-image: url("../img/team/team.png");
+  background-image: url("../img/team/team-compressed.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -16749,7 +16749,7 @@ header.timelinehead {
   color: white;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #393e46;
-  background-image: url("../img/timeline/timeline-header.jpg");
+  background-image: url("../img/timeline/timeline-header-compressed.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;

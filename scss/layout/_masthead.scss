@@ -2,7 +2,7 @@
 header.masthead {
   text-align: center;
   color: white;
-  @include dark-bg("../img/team/team.png");
+  @include dark-bg("../img/team/team-compressed.png");
   // Shift the masthead down by the header size when the screen size triggers the compressed menu
   margin-top: 61px;
   @media (min-width: 992px) {

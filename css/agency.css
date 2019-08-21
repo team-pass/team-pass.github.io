@@ -16510,7 +16510,7 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-brand img {
-  height: 1.75em;
+  height: 1.25em;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -16533,10 +16533,6 @@ img::-moz-selection {
   color: #e84545;
 }
 
-#mainNav.navbar-shrink .navbar-brand img {
-  height: 1.15em;
-}
-
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 25px;
@@ -16553,11 +16549,17 @@ img::-moz-selection {
   #mainNav .navbar-nav .nav-item .nav-link {
     padding: 1.1em 1em !important;
   }
+  #mainNav .navbar-brand img {
+    height: 1.5em;
+  }
   #mainNav.navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
     background-color: #333c49;
     border-bottom: 1px solid #485467;
+  }
+  #mainNav.navbar-shrink .navbar-brand img {
+    height: 1.25em;
   }
 }
 
@@ -16565,7 +16567,7 @@ header.masthead {
   text-align: center;
   color: white;
   position: relative;
-  margin-top: 61px;
+  margin-top: 56px;
 }
 
 header.masthead:before {
@@ -16595,15 +16597,15 @@ header.masthead:before {
 }
 
 header.masthead .intro-text {
-  padding-top: 150px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 header.masthead .intro-text .intro-lead-in {
-  font-size: 48px;
+  font-size: 25px;
   font-style: bold;
   line-height: 50px;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
   font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -16618,7 +16620,7 @@ header.masthead .intro-text .intro-heading {
 
 @media (min-width: 768px) {
   header.masthead .intro-text {
-    padding-top: 350px;
+    padding-top: 150px;
     padding-bottom: 200px;
   }
   header.masthead .intro-text .intro-lead-in {
@@ -16745,15 +16747,23 @@ header.masthead .intro-text .intro-heading {
 }
 
 header.timelinehead {
-  text-align: center;
-  color: white;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #393e46;
+  position: relative;
+}
+
+header.timelinehead:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
   background-image: url("../img/timeline/timeline-header.jpg");
   background-repeat: no-repeat;
-  background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+  -webkit-filter: brightness(50%);
+  filter: brightness(50%);
 }
 
 .timeline {
@@ -16769,7 +16779,7 @@ header.timelinehead {
   left: 40px;
   width: 2px;
   margin-left: -1.5px;
-  content: '';
+  content: "";
   background-color: #393e46;
 }
 
@@ -16781,7 +16791,7 @@ header.timelinehead {
 
 .timeline > li:after, .timeline > li:before {
   display: table;
-  content: ' ';
+  content: " ";
 }
 
 .timeline > li:after {
@@ -16829,8 +16839,17 @@ header.timelinehead {
   margin-top: 12px;
 }
 
-.timeline > li .timeline-image:last-of-type {
-  background-color: #e84545;
+.timeline > li .timeline-image.last:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 190px;
+  background-color: #222831;
+  top: calc(100% + 7px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .timeline > li.timeline-inverted > .timeline-panel {
@@ -16989,9 +17008,22 @@ header.timelinehead {
   font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.footer .divider {
-  border-color: #ced4da;
-  width: 80%;
+.footer a:hover {
+  text-decoration: none;
+}
+
+.footer .row > * {
+  margin-bottom: 1.25em;
+}
+
+.footer .row > *.last {
+  margin-bottom: 0;
+}
+
+.footer .row > * .copyright {
+  display: block;
+  height: auto;
+  line-height: 1em;
 }
 
 ul.social-buttons {
@@ -17025,7 +17057,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   height: 100%;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1000px) and (min-width: 768px) {
   .img-box {
     height: 80px;
   }

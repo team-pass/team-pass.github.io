@@ -4,7 +4,7 @@ header.masthead {
   color: white;
   @include dark-bg("../img/team/team.png");
   // Shift the masthead down by the header size when the screen size triggers the compressed menu
-  margin-top: 61px;
+  margin-top: 56px;
   @media (min-width: 992px) {
     margin-top: 0;
   }
@@ -14,14 +14,14 @@ header.masthead {
   }
 
   .intro-text {
-    padding-top: 150px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     .intro-lead-in {
-      font-size: 48px;
+      font-size: 25px;
       font-style: bold;
       line-height: 50px;
-      margin-bottom: 5px;
+      margin-bottom: 25px;
       @include subtitle-font;
     }
 
@@ -39,7 +39,7 @@ header.masthead {
 @media (min-width: 768px) {
   header.masthead {
     .intro-text {
-      padding-top: 350px;
+      padding-top: 150px;
       padding-bottom: 200px;
 
       .intro-lead-in {

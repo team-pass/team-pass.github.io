@@ -1,14 +1,6 @@
 // Styling for the timeline section
 header.timelinehead {
-  text-align: center;
-  color: white;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: $light;
-  background-image: url('../img/timeline/timeline-header.jpg');
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
+  @include dark-bg("../img/timeline/timeline-header.jpg");
 }
 
 .timeline {
@@ -22,7 +14,7 @@ header.timelinehead {
     left: 40px;
     width: 2px;
     margin-left: -1.5px;
-    content: '';
+    content: "";
     background-color: $timeline-border-color;
   }
   > li {
@@ -32,7 +24,7 @@ header.timelinehead {
     &:after,
     &:before {
       display: table;
-      content: ' ';
+      content: " ";
     }
     &:after {
       clear: both;
@@ -57,6 +49,8 @@ header.timelinehead {
       }
     }
     .timeline-image {
+      $img-border-width: 7px;
+
       position: absolute;
       z-index: 100;
       left: 0;
@@ -65,15 +59,26 @@ header.timelinehead {
       margin-left: 0;
       text-align: center;
       color: white;
-      border: 7px solid $timeline-border-color;
+      border: $img-border-width solid $timeline-border-color;
       border-radius: 100%;
       h4 {
         font-size: 10px;
         line-height: 14px;
         margin-top: 12px;
       }
-      &:last-of-type {
-        background-color: $primary;
+      &.last {
+        &:before {
+          // Create something to obstruct the bottom of the line
+          content: "";
+          position: absolute;
+          display: block;
+          width: 10px;
+          height: 190px;
+          background-color: $body-bg;
+          top: calc(100% + #{$img-border-width});
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
     }
     &.timeline-inverted > .timeline-panel {
@@ -107,13 +112,13 @@ header.timelinehead {
     }
   }
   .timeline-body {
-     > ul,
+    > ul,
     > p {
       margin-bottom: 0;
     }
   }
 }
-@media(min-width:768px) {
+@media (min-width: 768px) {
   .timeline {
     &:before {
       left: 50%;
@@ -146,7 +151,7 @@ header.timelinehead {
     }
   }
 }
-@media(min-width:992px) {
+@media (min-width: 992px) {
   .timeline {
     > li {
       min-height: 150px;
@@ -169,7 +174,7 @@ header.timelinehead {
     }
   }
 }
-@media(min-width:1200px) {
+@media (min-width: 1200px) {
   .timeline {
     > li {
       min-height: 170px;

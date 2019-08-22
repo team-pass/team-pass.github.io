@@ -2,48 +2,55 @@
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url('../img/header-bg.jpg');
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
+  @include dark-bg("../img/team/team.png");
+  // Shift the masthead down by the header size when the screen size triggers the compressed menu
+  margin-top: 56px;
+  @media (min-width: 992px) {
+    margin-top: 0;
+  }
+
+  &:before {
+    background-position: center top;
+  }
+
   .intro-text {
-    padding-top: 150px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
     .intro-lead-in {
-      font-size: 22px;
-      font-style: italic;
-      line-height: 22px;
+      font-size: 25px;
+      font-style: bold;
+      line-height: 50px;
       margin-bottom: 25px;
-      @include serif-font;
+      @include subtitle-font;
     }
+
     .intro-heading {
       font-size: 50px;
-      font-weight: 700;
+      font-weight: bold;
       line-height: 50px;
+      margin-top: 150px;
       margin-bottom: 25px;
       @include heading-font;
     }
   }
 }
-@media(min-width:768px) {
+
+@media (min-width: 768px) {
   header.masthead {
     .intro-text {
-      padding-top: 300px;
+      padding-top: 150px;
       padding-bottom: 200px;
+
       .intro-lead-in {
         font-size: 40px;
-        font-style: italic;
         line-height: 40px;
-        margin-bottom: 25px;
-        @include serif-font;
+        margin-bottom: 50px;
       }
+
       .intro-heading {
         font-size: 75px;
-        font-weight: 700;
         line-height: 75px;
-        margin-bottom: 50px;
-        @include heading-font;
       }
     }
   }

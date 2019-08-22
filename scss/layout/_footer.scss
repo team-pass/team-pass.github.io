@@ -15,6 +15,20 @@
     text-transform: none;
     @include heading-font;
   }
+  a:hover {
+    text-decoration: none;
+  }
+  .row > * {
+    margin-bottom: 1.25em;
+    &.last {
+      margin-bottom: 0;
+    }
+    .copyright {
+      display: block;
+      height: auto;
+      line-height: 1em;
+    }
+  }
 }
 
 ul.social-buttons {
@@ -32,12 +46,25 @@ ul.social-buttons {
       color: white;
       border-radius: 100%;
       outline: none;
-      background-color: $gray-900;
+      background-color: $social-color;
       &:active,
       &:focus,
       &:hover {
-        background-color: $primary;
+        background-color: darken($social-color, 6%);
       }
     }
+  }
+}
+
+.img-box {
+  height: 100px;
+
+  a,
+  img {
+    height: 100%;
+  }
+
+  @media (max-width: 1000px) and (min-width: 768px) {
+    height: 80px;
   }
 }

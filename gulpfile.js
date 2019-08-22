@@ -49,25 +49,25 @@ function clean() {
 
 // Bring third party dependencies from node_modules into vendor directory
 function modules() {
-  // Bootstrap
-  var bootstrap = gulp.src('./node_modules/bootstrap/dist/**/*')
-    .pipe(gulp.dest('./vendor/bootstrap'));
+  // Bootstrap SCSS
+  var bootstrapSCSS = gulp.src('./node_modules/bootstrap/scss/**/*')
+    .pipe(gulp.dest('./vendor/bootstrap/scss'));
+  // Bootstrap js
+  var bootstrapJS = gulp.src('./node_modules/bootstrap/dist/js/**/*')
+  .pipe(gulp.dest('./vendor/bootstrap/js'));
   // Font Awesome CSS
-  var fontAwesomeCSS = gulp.src('./node_modules/@fortawesome/fontawesome-free/css/**/*')
-    .pipe(gulp.dest('./vendor/fontawesome-free/css'));
+  var fontAwesomeSCSS = gulp.src('./node_modules/@fortawesome/fontawesome-free/scss/**/*')
+    .pipe(gulp.dest('./vendor/fontawesome/scss'));
   // Font Awesome Webfonts
   var fontAwesomeWebfonts = gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/**/*')
-    .pipe(gulp.dest('./vendor/fontawesome-free/webfonts'));
-  // jQuery Easing
-  var jqueryEasing = gulp.src('./node_modules/jquery.easing/*.js')
-    .pipe(gulp.dest('./vendor/jquery-easing'));
+    .pipe(gulp.dest('./vendor/fontawesome/webfonts'));
   // jQuery
   var jquery = gulp.src([
       './node_modules/jquery/dist/*',
       '!./node_modules/jquery/dist/core.js'
     ])
     .pipe(gulp.dest('./vendor/jquery'));
-  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, jqueryEasing);
+  return merge(bootstrapSCSS, bootstrapJS, fontAwesomeSCSS, fontAwesomeWebfonts, jquery);
 }
 
 // CSS task
@@ -102,8 +102,6 @@ function js() {
     .src([
       './js/*.js',
       '!./js/*.min.js',
-      '!./js/contact_me.js',
-      '!./js/jqBootstrapValidation.js'
     ])
     .pipe(uglify())
     .pipe(header(banner, {

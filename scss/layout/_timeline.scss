@@ -3,20 +3,15 @@ header.timelinehead {
   @include dark-bg("../img/timeline/timeline-header.jpg");
 }
 
+.page-section.scope {
+  padding-bottom: 0;
+}
+
 .timeline {
   position: relative;
   padding: 0;
   list-style: none;
-  &:before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 40px;
-    width: 2px;
-    margin-left: -1.5px;
-    content: "";
-    background-color: $timeline-border-color;
-  }
+  font-size: 0.8em;
   > li {
     position: relative;
     min-height: 50px;
@@ -66,19 +61,19 @@ header.timelinehead {
         line-height: 14px;
         margin-top: 12px;
       }
-      &.last {
-        &:before {
-          // Create something to obstruct the bottom of the line
-          content: "";
-          position: absolute;
-          display: block;
-          width: 10px;
-          height: 190px;
-          background-color: $body-bg;
-          top: calc(100% + #{$img-border-width});
-          left: 50%;
-          transform: translateX(-50%);
-        }
+      &:after {
+        position: absolute;
+        top: 100%;
+        bottom: 0;
+        height: 175px;
+        left: calc(50% - 1px);
+        width: 2px;
+        margin-left: -1.5px;
+        content: "";
+        background-color: $timeline-border-color;
+      }
+      &.last:after {
+        display: none;
       }
     }
     &.timeline-inverted > .timeline-panel {
@@ -118,6 +113,11 @@ header.timelinehead {
     }
   }
 }
+@media (max-width: 420px) {
+  .timeline > li .timeline-image:after {
+    height: 250px;
+  }
+}
 @media (min-width: 768px) {
   .timeline {
     &:before {
@@ -142,6 +142,9 @@ header.timelinehead {
           line-height: 18px;
           margin-top: 16px;
         }
+        &:after {
+          height: 260px;
+        }
       }
       &.timeline-inverted > .timeline-panel {
         float: right;
@@ -153,6 +156,7 @@ header.timelinehead {
 }
 @media (min-width: 992px) {
   .timeline {
+    font-size: 1em;
     > li {
       min-height: 150px;
       .timeline-panel {

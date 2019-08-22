@@ -15,9 +15,19 @@
     text-transform: none;
     @include heading-font;
   }
-  .divider {
-    border-color: $gray-400;
-    width: 80%;
+  a:hover {
+    text-decoration: none;
+  }
+  .row > * {
+    margin-bottom: 1.25em;
+    &.last {
+      margin-bottom: 0;
+    }
+    .copyright {
+      display: block;
+      height: auto;
+      line-height: 1em;
+    }
   }
 }
 
@@ -54,7 +64,7 @@ ul.social-buttons {
     height: 100%;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1000px) and (min-width: 768px) {
     height: 80px;
   }
 }

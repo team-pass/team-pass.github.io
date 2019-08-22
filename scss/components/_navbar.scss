@@ -17,7 +17,7 @@
     color: $primary;
 
     img {
-      height: 1.75em;
+      height: 1.25em;
       transition: all 0.3s;
     }
 
@@ -46,13 +46,9 @@
       }
     }
   }
-
-  &.navbar-shrink .navbar-brand img {
-    height: 1.15em;
-  }
 }
 
-@media(min-width:992px) {
+@media (min-width: 992px) {
   #mainNav {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -68,12 +64,12 @@
       transition: all 0.3s;
     }
 
-    .navbar-nav {
-      .nav-item {
-        .nav-link {
-          padding: 1.1em 1em !important;
-        }
-      }
+    .navbar-nav .nav-item .nav-link {
+      padding: 1.1em 1em !important;
+    }
+
+    .navbar-brand img {
+      height: 1.5em;
     }
 
     &.navbar-shrink {
@@ -81,6 +77,9 @@
       padding-bottom: 0;
       background-color: $nav-bg-color;
       border-bottom: 1px solid lighten($nav-bg-color, 10%);
+      .navbar-brand img {
+        height: 1.25em;
+      }
     }
   }
 }

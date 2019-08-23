@@ -1,10 +1,6 @@
 // Styling for the timeline section
 header.timelinehead {
-  @include dark-bg("../img/timeline/timeline-header.jpg");
-}
-
-.page-section.scope {
-  padding-bottom: 0;
+  @include dark-bg("../img/timeline/timeline-header-compressed.jpg");
 }
 
 .timeline {

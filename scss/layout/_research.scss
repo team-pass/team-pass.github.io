@@ -1,15 +1,31 @@
 // Styling for the portfolio section
-#portfolio {
-  .portfolio-item {
+header.research {
+  @include dark-bg(
+    "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9"
+  );
+}
+
+@mixin top-border-radius($br) {
+  border-radius: $br $br 0 0;
+}
+
+@mixin bot-border-radius($br) {
+  border-radius: 0 0 $br $br;
+}
+
+#research {
+  .research-item {
     right: 0;
     margin: 0 0 15px;
-    .portfolio-link {
+    .research-link {
       position: relative;
       display: block;
       max-width: 400px;
+      height: 200px;
       margin: 0 auto;
       cursor: pointer;
-      .portfolio-hover {
+      .research-hover {
+        @include top-border-radius(5px);
         position: absolute;
         width: 100%;
         height: 100%;
@@ -17,11 +33,12 @@
         -moz-transition: all ease 0.5s;
         transition: all ease 0.5s;
         opacity: 0;
-        background: fade-out($primary, .1);
+        background: fade-out($primary, 0.1);
         &:hover {
           opacity: 1;
         }
-        .portfolio-hover-content {
+        .research-hover-content {
+          @include top-border-radius(5px);
           font-size: 20px;
           position: absolute;
           top: 50%;
@@ -39,13 +56,23 @@
           }
         }
       }
+      img {
+        @include top-border-radius(5px);
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        &.quest {
+          object-position: top;
+        }
+      }
     }
-    .portfolio-caption {
+    .research-caption {
+      @include bot-border-radius(5px);
       max-width: 400px;
       margin: 0 auto;
       padding: 25px;
       text-align: center;
-      background-color: $card-color;
+      background-color: $body-bg;
       h4 {
         margin: 0;
         text-transform: none;
@@ -62,9 +89,9 @@
     z-index: 2;
   }
 }
-@media(min-width:767px) {
-  #portfolio {
-    .portfolio-item {
+@media (min-width: 767px) {
+  #research {
+    .research-item {
       margin: 0 0 30px;
     }
   }

@@ -16669,20 +16669,42 @@ header.masthead .intro-text .intro-heading {
   filter: brightness(50%);
 }
 
-#portfolio .portfolio-item {
+header.research {
+  position: relative;
+}
+
+header.research:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-image: url("https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  -webkit-filter: brightness(50%);
+  filter: brightness(50%);
+}
+
+#research .research-item {
   right: 0;
   margin: 0 0 15px;
 }
 
-#portfolio .portfolio-item .portfolio-link {
+#research .research-item .research-link {
   position: relative;
   display: block;
   max-width: 400px;
+  height: 200px;
   margin: 0 auto;
   cursor: pointer;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+#research .research-item .research-link .research-hover {
+  border-radius: 5px 5px 0 0;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -16692,11 +16714,12 @@ header.masthead .intro-text .intro-heading {
   background: rgba(232, 69, 69, 0.9);
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+#research .research-item .research-link .research-hover:hover {
   opacity: 1;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+#research .research-item .research-link .research-hover .research-hover-content {
+  border-radius: 5px 5px 0 0;
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -16707,55 +16730,77 @@ header.masthead .intro-text .intro-heading {
   color: white;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+#research .research-item .research-link .research-hover .research-hover-content i {
   margin-top: -12px;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+#research .research-item .research-link .research-hover .research-hover-content h3,
+#research .research-item .research-link .research-hover .research-hover-content h4 {
   margin: 0;
 }
 
-#portfolio .portfolio-item .portfolio-caption {
+#research .research-item .research-link img {
+  border-radius: 5px 5px 0 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#research .research-item .research-link img.quest {
+  -o-object-position: top;
+  object-position: top;
+}
+
+#research .research-item .research-caption {
+  border-radius: 0 0 5px 5px;
   max-width: 400px;
   margin: 0 auto;
   padding: 25px;
   text-align: center;
-  background-color: #393e46;
+  background-color: #222831;
 }
 
-#portfolio .portfolio-item .portfolio-caption h4 {
+#research .research-item .research-caption h4 {
   margin: 0;
   text-transform: none;
 }
 
-#portfolio .portfolio-item .portfolio-caption p {
+#research .research-item .research-caption p {
   font-size: 16px;
   font-style: italic;
   margin: 0;
   font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-#portfolio * {
+#research * {
   z-index: 2;
 }
 
 @media (min-width: 767px) {
-  #portfolio .portfolio-item {
+  #research .research-item {
     margin: 0 0 30px;
   }
 }
 
 header.timelinehead {
-  text-align: center;
-  color: white;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #393e46;
+  position: relative;
+}
+
+header.timelinehead:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
   background-image: url("../img/timeline/timeline-header-compressed.jpg");
   background-repeat: no-repeat;
-  background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+  -webkit-filter: brightness(50%);
+  filter: brightness(50%);
 }
 
 .timeline {

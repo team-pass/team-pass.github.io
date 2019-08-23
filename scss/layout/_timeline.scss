@@ -1,14 +1,6 @@
 // Styling for the timeline section
 header.timelinehead {
-  text-align: center;
-  color: white;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: $light;
-  background-image: url('../img/timeline/timeline-header-compressed.jpg');
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
+  @include dark-bg("../img/timeline/timeline-header-compressed.jpg");
 }
 
 .timeline {

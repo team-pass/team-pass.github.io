@@ -109,9 +109,9 @@ header.timelinehead {
     }
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 370px) {
   .timeline > li .timeline-image:after {
-    height: 250px;
+    height: 225px;
   }
 }
 @media (min-width: 768px) {

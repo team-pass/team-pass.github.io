@@ -16597,8 +16597,8 @@ header.masthead:before {
 }
 
 header.masthead .intro-text {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 1px;
+  padding-bottom: 20px;
 }
 
 header.masthead .intro-text .intro-lead-in {
@@ -16618,7 +16618,7 @@ header.masthead .intro-text .intro-heading {
   font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header.masthead .intro-text {
     padding-top: 150px;
     padding-bottom: 200px;
@@ -16667,6 +16667,11 @@ header.masthead .intro-text .intro-heading {
   background-size: cover;
   -webkit-filter: brightness(50%);
   filter: brightness(50%);
+}
+
+.phone-img {
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 header.research {
@@ -16920,9 +16925,9 @@ header.timelinehead:before {
   margin-bottom: 0;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 370px) {
   .timeline > li .timeline-image:after {
-    height: 250px;
+    height: 225px;
   }
 }
 
